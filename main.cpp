@@ -31,7 +31,7 @@ int main() {
         if (std::cin.fail()) {
             std::cin.clear();
             std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
-            std::cout << "----------------------------------------------\n";
+            std::cout << "\n----------------------------------------------\n";
             std::cout << "Errore: Input non valido, inserisci un numero!\n";
             continue;
         }
@@ -51,6 +51,13 @@ int main() {
 
                 std::cout << "("<<giocatore.nome<<") Inserisci il punteggio -> ";
                 std::cin >> giocatore.punteggio;
+
+                while (!(std::cin >> giocatore.punteggio)) {
+                    std::cout << "Errore: Input non valido. Inserisci un numero!" << std::endl;
+                    std::cin.clear();
+                    std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+                    std::cout << "Inserisci il punteggio -> ";
+                }
 
                 inserisciGiocatore(classifica, giocatore.nome, giocatore.punteggio);
 
