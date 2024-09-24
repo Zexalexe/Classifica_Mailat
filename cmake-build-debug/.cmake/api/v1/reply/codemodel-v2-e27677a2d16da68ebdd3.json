@@ -49,8 +49,8 @@
 	"kind" : "codemodel",
 	"paths" : 
 	{
-		"build" : "/Users/eliseimailat/CLionProjects/Classifica_Mailat/cmake-build-debug",
-		"source" : "/Users/eliseimailat/CLionProjects/Classifica_Mailat"
+		"build" : "/Users/eliseimailat/Classifica_Mailat/cmake-build-debug",
+		"source" : "/Users/eliseimailat/Classifica_Mailat"
 	},
 	"version" : 
 	{
