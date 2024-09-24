@@ -30,3 +30,10 @@ void mostraClassifica(Player classifica[]){
     }
 }
 
+void shiftClassifica(Player classifica[], int index){
+    for(int i = DIM_CLASSIFICA-1; i > index; i--){
+        classifica[i].nome = classifica[i-1].nome;
+        classifica[i].punteggio = classifica[i-1].punteggio;
+    }
+}
+
