@@ -8,25 +8,36 @@
 
 void initClassifica(Player classifica[]){
     for(int i=0; i < DIM_CLASSIFICA; i++){
-        classifica[i].nome = "Unknown";
+        classifica[i].nome = "---------------";
         classifica[i].punteggio = 0;
-}
     }
+}
 
-void mostraClassifica(Player classifica[]){
+void mostraClassifica(Player classifica[]) {
+    std::cout << "___________________________________\n";
+    std::cout << "             CLASSIFICA             \n";
+    std::cout << "-----------------------------------\n";
+    std::cout << "Pos        Nome        Punteggio\n";
 
-    std::cout << "--------------------------------------------------\n";
-    std::cout << "                    CLASSIFICA\n";
-    std::cout << "--------------------------------------------------\n";
-    for(int i = 0; i < DIM_CLASSIFICA; i++){
-        if(i != DIM_CLASSIFICA-1){
-            std::cout << " " << i+1 << "  | ";
+    for (int i = 0; i < DIM_CLASSIFICA; i++) {
+        if(i < 9)
+            std::cout << i + 1 << "  | ";
+        else
+            std::cout << i + 1 << " | ";
+
+        std::string nome = classifica[i].nome;
+        if (nome.length() > MAX_NOME) {
+            nome = nome.substr(0, MAX_NOME);
         }
-        else{
-            std::cout << i+1 << "  | ";
-        }
+        std::cout << nome;
+        std::cout << std::string(MAX_NOME - nome.length(), ' ');  // Aggiunge spazi per allineare
 
-        std::cout <<classifica[i].nome << " | " << classifica[i].punteggio << std::endl;
+        std::cout << " | ";
+
+        std::string punteggioStr = std::to_string(classifica[i].punteggio);
+        std::cout << std::string(MAX_PUNTEGGIO - punteggioStr.length(), ' ') << punteggioStr;
+
+        std::cout << std::endl;
     }
 }
 

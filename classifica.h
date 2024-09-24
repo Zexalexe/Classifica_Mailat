@@ -8,6 +8,8 @@
 #include <string>
 
 const int DIM_CLASSIFICA = 10;
+const int MAX_NOME = 15;
+const int MAX_PUNTEGGIO = 10;
 
 typedef struct {
     std::string nome;
