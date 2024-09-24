@@ -2,6 +2,13 @@
 // Created by Elisei Mailat on 24/09/24.
 //
 
+#include <iostream>
+#include <string>
 #include "classifica.h"
 
-
+void initClassifica(Player classifica[]){
+    for(int i=0; i < DIM_CLASSIFICA; i++){
+        classifica[i].nome = "Unknown";
+        classifica[i].punteggio = 0;
+}
+    }
