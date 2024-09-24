@@ -20,7 +20,7 @@ void initClassifica(Player classifica[]);
 
 void mostraClassifica(Player classifica[]);
 
-void shiftClassfica(Player classifica[], int index);
+void shiftClassifica(Player classifica[], int index);
 
 void inserisciGiocatore(Player classifica[], std::string nome, int punteggio);
 
