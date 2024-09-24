@@ -18,6 +18,8 @@ void initClassifica(Player classifica[]);
 
 void mostraClassifica(Player classifica[]);
 
-void inserisciGiocatore(Player classifica[]);
+void shiftClassfica(Player classifica[], int index);
+
+void inserisciGiocatore(Player classifica[], std::string nome, int punteggio);
 
 #endif //CLASSIFICA_MAILAT_CLASSIFICA_H
