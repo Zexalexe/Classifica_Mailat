@@ -12,3 +12,21 @@ void initClassifica(Player classifica[]){
         classifica[i].punteggio = 0;
 }
     }
+
+void mostraClassifica(Player classifica[]){
+
+    std::cout << "--------------------------------------------------\n";
+    std::cout << "                    CLASSIFICA\n";
+    std::cout << "--------------------------------------------------\n";
+    for(int i = 0; i < DIM_CLASSIFICA; i++){
+        if(i != DIM_CLASSIFICA-1){
+            std::cout << " " << i+1 << "  | ";
+        }
+        else{
+            std::cout << i+1 << "  | ";
+        }
+
+        std::cout <<classifica[i].nome << " | " << classifica[i].punteggio << std::endl;
+    }
+}
+
