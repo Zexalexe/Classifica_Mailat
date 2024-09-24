@@ -37,3 +37,23 @@ void shiftClassifica(Player classifica[], int index){
     }
 }
 
+void inserisciGiocatore(Player classifica[], std::string nome, int punteggio){
+    int i = 0;
+    bool isUpdated = false;
+    while(i < DIM_CLASSIFICA && !isUpdated){
+        if(punteggio > classifica[i].punteggio) {
+            shiftClassifica(classifica, i);
+            classifica[i].nome = nome;
+            classifica[i].punteggio = punteggio;
+            isUpdated = true;
+        }
+        else if(punteggio == classifica[i].punteggio){
+            shiftClassifica(classifica, i+1);
+            classifica[i+1].nome = nome;
+            classifica[i+1].punteggio = punteggio;
+            isUpdated = true;
+        }
+
+        i++;
+    }
+}
