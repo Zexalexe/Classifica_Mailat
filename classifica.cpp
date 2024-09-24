@@ -14,16 +14,17 @@ void initClassifica(Player classifica[]){
 }
 
 void mostraClassifica(Player classifica[]) {
-    std::cout << "___________________________________\n";
-    std::cout << "             CLASSIFICA             \n";
-    std::cout << "-----------------------------------\n";
-    std::cout << "Pos        Nome        Punteggio\n";
+    std::cout << std::endl;
+    std::cout << " ____________________________________\n";
+    std::cout << "|             CLASSIFICA             | \n";
+    std::cout << "|------------------------------------|\n";
+    std::cout << "| Pos |      Nome       | Punteggio  |\n";
 
     for (int i = 0; i < DIM_CLASSIFICA; i++) {
         if(i < 9)
-            std::cout << i + 1 << "  | ";
+            std::cout << "| "<< i + 1 << "   | ";
         else
-            std::cout << i + 1 << " | ";
+            std::cout << "| "<< i + 1 << "  | ";
 
         std::string nome = classifica[i].nome;
         if (nome.length() > MAX_NOME) {
@@ -35,10 +36,12 @@ void mostraClassifica(Player classifica[]) {
         std::cout << " | ";
 
         std::string punteggioStr = std::to_string(classifica[i].punteggio);
-        std::cout << std::string(MAX_PUNTEGGIO - punteggioStr.length(), ' ') << punteggioStr;
+        std::cout << std::string(MAX_PUNTEGGIO - punteggioStr.length(), ' ') << punteggioStr << " |";
+
 
         std::cout << std::endl;
     }
+    std::cout << "|_____|_________________|____________|\n";
 }
 
 void shiftClassifica(Player classifica[], int index){

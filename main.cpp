@@ -42,6 +42,7 @@ int main() {
                 break;
             case 2:
 
+                std::cout<<std::endl;
                 std::cout << " _______________________________________________________\n";
                 std::cout << "|                  INSERISCI GIOCATORE                  |\n";
                 std::cout << " -------------------------------------------------------\n";
@@ -51,13 +52,6 @@ int main() {
 
                 std::cout << "("<<giocatore.nome<<") Inserisci il punteggio -> ";
                 std::cin >> giocatore.punteggio;
-
-                while (!(std::cin >> giocatore.punteggio)) {
-                    std::cout << "Errore: Input non valido. Inserisci un numero!" << std::endl;
-                    std::cin.clear();
-                    std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
-                    std::cout << "Inserisci il punteggio -> ";
-                }
 
                 inserisciGiocatore(classifica, giocatore.nome, giocatore.punteggio);
 
