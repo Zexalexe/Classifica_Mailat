@@ -47,8 +47,10 @@ int main() {
                 std::cout << "|                  INSERISCI GIOCATORE                  |\n";
                 std::cout << " -------------------------------------------------------\n";
 
+                std::cin.ignore();  // Ignore the leftover newline from previous input
+
                 std::cout << "Inserisci il nome -> ";
-                std::cin >> giocatore.nome;
+                std::getline(std::cin, giocatore.nome);
 
                 std::cout << "("<<giocatore.nome<<") Inserisci il punteggio -> ";
                 std::cin >> giocatore.punteggio;

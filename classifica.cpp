@@ -16,7 +16,7 @@ void initClassifica(Player classifica[]){
 void mostraClassifica(Player classifica[]) {
     std::cout << std::endl;
     std::cout << " ____________________________________\n";
-    std::cout << "|             CLASSIFICA             | \n";
+    std::cout << "|             CLASSIFICA             |\n";
     std::cout << "|------------------------------------|\n";
     std::cout << "| Pos |      Nome       | Punteggio  |\n";
 
